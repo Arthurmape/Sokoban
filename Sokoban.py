@@ -278,7 +278,7 @@ def tenta_movimentar_jogador(mapa, caracMov):
         return(True, False)
     
     elif (mapa[jogador_depois[0]][jogador_depois[1]] in (CAIXA_NO_PISO, CAIXA_NA_MARCA) and 
-          mapa[mov_apos[0]][mov_apos[1]] in (PISO_VAZIO, MARCA_VAZIA)):
+          mapa[mov_apos[0]][mov_apos[1]] in (PISO_VAZIO, MARCA_VAZIA)): #JOGADOR MOVENDO UMA CAIXA
         if mapa[jogador_depois[0]][jogador_depois[1]] == CAIXA_NA_MARCA:
             mapa[jogador_depois[0]][jogador_depois[1]] = JOGADOR_NA_MARCA
         else:
@@ -297,7 +297,7 @@ def tenta_movimentar_jogador(mapa, caracMov):
         return(True, True)
     
     elif (mapa[jogador_depois[0]][jogador_depois[1]] in (CAIXA_NO_PISO, CAIXA_NA_MARCA) and 
-          mapa[mov_apos[0]][mov_apos[1]] in (PAREDE, CAIXA_NA_MARCA, CAIXA_NO_PISO)):
+          mapa[mov_apos[0]][mov_apos[1]] in (PAREDE, CAIXA_NA_MARCA, CAIXA_NO_PISO)): #MOVIMENTO INVÁLIDO
         print("\nMovimento inválido, a caixa que você empurrou está presa!")
 
         return(False, False)
